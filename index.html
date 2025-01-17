@@ -3,62 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
+    <title>Simple Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
             text-align: center;
         }
-        header {
+
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
             background: #007BFF;
             color: white;
-            padding: 1rem 0;
-        }
-        main {
-            padding: 2rem;
-        }
-        button {
-            padding: 0.5rem 1rem;
-            background-color: #007BFF;
-            color: white;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        .btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Simple Web Page</h1>
+        <h1>Welcome to My Simple Webpage</h1>
     </header>
-    <main>
-        <p>This is a basic web page created using HTML, CSS, and JavaScript.</p>
-        <button id="clickButton">Click Me</button>
-        <p id="message" style="margin-top: 1rem;"></p>
-    </main>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Hello World!</h2>
+        <p>This is a simple webpage created with HTML, CSS, and JavaScript.</p>
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image" style="margin: 20px auto; display: block;">
+        <button class="btn" onclick="showAlert()">Click Me</button>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Simple Web Page</p>
+        <p>&copy; 2025 Simple Webpage. All rights reserved.</p>
     </footer>
+
     <script>
-        document.getElementById('clickButton').addEventListener('click', function() {
-            const message = document.getElementById('message');
-            message.textContent = 'Button clicked! Have a great day!';
-        });
+        function showAlert() {
+            alert('Button clicked!');
+        }
     </script>
 </body>
 </html>
