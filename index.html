@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Simple Web Page</h1>
+    </header>
+    <main>
+        <p>This is a basic web page created using HTML, CSS, and JavaScript.</p>
+        <button id="clickButton">Click Me</button>
+        <p id="message" style="margin-top: 1rem;"></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Simple Web Page</p>
+    </footer>
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            const message = document.getElementById('message');
+            message.textContent = 'Button clicked! Have a great day!';
+        });
+    </script>
+</body>
+</html>
